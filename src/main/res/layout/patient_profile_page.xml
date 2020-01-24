@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relativeLayout">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profilePicture"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@mipmap/ic_launcher_round"
+                        app:civ_border_color="#FFFFFF"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/profilePicture"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Name"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/name"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:text="Age"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/relativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="35dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout"
+                    android:layout_alignStart="@+id/map"
+                    android:text="Last Location"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:layout_alignLeft="@+id/map" />
+
+
+                <Button
+                    android:id="@+id/editRecap"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/map"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Edit Recap"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="16sp" />
+
+
+
+                <Button
+                    android:id="@+id/editMedication"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/editRecap"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Edit medication plan"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/editHomeCoords"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/editMedication"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Edit Home Coordinates"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/editDailyTasks"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/editHomeCoords"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Edit Daily Tasks"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
